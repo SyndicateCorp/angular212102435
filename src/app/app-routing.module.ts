@@ -8,6 +8,7 @@ import { Dashboard2Component } from './dashboard2/dashboard2.component';
 import { Dashboard3Component } from './dashboard3/dashboard3.component';
 import { MahasiswaComponent } from './mahasiswa/mahasiswa.component';
 import { otentikasiGuard } from './otentikasi.guard';
+import { ForexComponent } from './forex/forex.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'dashboard3', component: Dashboard3Component, canActivate: [otentikasiGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'mahasiswa', component: MahasiswaComponent, canActivate: [otentikasiGuard]}
+  { path: 'mahasiswa', component: MahasiswaComponent, canActivate: [otentikasiGuard]},
+  { path: 'forex', component:ForexComponent, canActivate: [otentikasiGuard]}
 ];
 
 @NgModule({
